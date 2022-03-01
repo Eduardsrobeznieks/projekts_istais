@@ -4,6 +4,7 @@ M=m
 d = int(input('ievadiet datumu - '))
 Y = int(input('ievadiet gadu - '))
 
+#nosaka gada dienu
 s=0
 DOY=0
 while M>1:
@@ -24,6 +25,7 @@ while M>1:
 DOY=s+d
 print(DOY)
 
+#katram mçnesim savs dienu skaits un b vajag algoritmam talak
 if m==1: b=36 ; n=31 ; menesis='Janvâris'
 elif m==2: 
     b=39 ; menesis='Februâris'
@@ -44,6 +46,7 @@ else: print('FATAL ERROR 404 ')
 print('')
 print('        ',menesis,Y)
 
+#algoritms atrod nedçïas dienu datumam, maìija
 if m==1 or m==2:
     Y=Y-1
 y = Y % 100
@@ -53,6 +56,7 @@ d0 = int((b + floor(y/4) + floor(c/4) + 1 + y -2*c) % 7 - 1) #mçneða 1.diena
 if d0==-1: d0=6
 elif d0==0: d0=7
 
+#izprintç vizuâlu kalendâru
 print('Mo  Tu  We  Th  Fr  Sa  Su')
 for k in range(0,36,7):
     for i in range(1,8):
@@ -73,4 +77,5 @@ if w==5: print('ceturtdiena')
 if w==6: print('piektdiena')
 if w==0: print('sestdiena')
 if w==1: print('svçtdiena')
+
 
